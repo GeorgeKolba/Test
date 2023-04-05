@@ -1,0 +1,305 @@
+html{
+  scroll-behavior:smooth;
+}
+body{
+  background-color: #222;
+  padding:0;
+  margin:0;
+  overflow-x: hidden;
+}
+.images-container {
+	align-items: start;
+	display: grid;
+  padding-top:2%;
+  margin:1%;
+	grid-gap: 40px;
+	grid-template-columns: repeat(auto-fit,47%);
+	justify-content: center;
+}
+.images-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 400ms;
+  cursor: pointer;
+}
+
+.images-container .image {
+  position: relative;
+  overflow: hidden;
+  transition: all 400ms;
+}
+
+.images-container .description1 {
+  cursor: pointer;
+  position: absolute;
+  bottom: -1000px;
+  height:100%;
+  width:100%;
+  background: #00000023;
+  color: #fff;
+  opacity: 0;
+  transition: all 400ms;
+}
+.images-container .description2 {
+  cursor: pointer;
+  position: absolute;
+  bottom: -1000px;
+  height:100%;
+  width:100%;
+  background: #00000023;
+  color: #fff;
+  opacity: 0;
+  transition: all 400ms;
+}
+
+.images-container .image:hover .description1 {
+  opacity: 1;
+  bottom: 0;
+  transition: all 400ms;
+}
+.images-container .image:hover .description2 {
+  opacity: 1;
+  bottom: 0;
+  transition: all 400ms;
+}
+
+.images-container .image:hover img {
+  transform: scale(1.1);
+  filter:blur(4px);
+  -webkit-filter:blur(4px);
+  transition: all 400ms;
+}
+
+.images-container .description1:active {
+  transform: scale(1.10);
+  transition: all 400ms;
+}
+
+.images-container .description2:active {
+  transform: scale(1.10);
+  transition: all 400ms;
+}
+
+.images-container :active {
+  transform: scale(0.97) ;
+  transition: all 400ms;
+}
+
+.text1{
+  margin-top: 10%;
+  padding-right: 50px;
+  text-align: right;
+  transition: all 400ms;
+}
+
+.text2{
+  margin-top: 10%;
+  padding-left: 50px;
+  text-align: left;
+  transition: all 400ms;
+
+}
+
+.h1{
+  font-size: 70px;
+  font-family: 'Righteous', cursive;
+  transition: all 400ms;
+}
+.images-container:hover .description1  .text1  .h1{
+  color:rgb(212, 49, 49);
+  transition: 3s;
+}
+
+.h2{
+  font-size: 70px;
+  font-family: 'Righteous', cursive;
+  transition: all 400ms;
+}
+.images-container:hover .description2  .text2  .h2{
+  color:#ff9a17;
+  transition: 3s;
+}
+.h3{
+  font-size: 70px;
+  font-family: 'Righteous', cursive;
+  transition: all 400ms;
+}
+p{
+  font-size: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  transition: all 400ms;
+}
+
+
+.images-container:hover .description1  .text1  .color1{
+  color:rgb(212, 49, 49);
+  transition: 5s;
+}
+
+.images-container:hover .description2  .text2  .color2{
+  color:#ff9a17;
+  transition: 5s;
+}
+
+
+
+header{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 1005;
+    height: 80px;
+}
+
+header h4{
+    position: absolute;
+    left:10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.intro{
+    position: fixed;
+    z-index: 1;
+    left:0;
+    top:0;
+    width:100%;
+    height:100vh;
+    background-color: #222;
+    transition: 1s;
+}
+
+.logo-header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#ffffff;
+    font-family: 'Righteous', cursive;
+    font-size:80px;
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade{
+    bottom: 150px;
+    opacity:0;
+    transition: ease-in-out 0.5s;
+}
+
+
+.headername{
+  color:white;
+  text-align: center;
+  margin-top: 5%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+}
+
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: .9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+  0% { transform: translate(0,0) }
+  10% { transform: translate(-5%,-5%) }
+  20% { transform: translate(-10%,5%) }
+  30% { transform: translate(5%,-10%) }
+  40% { transform: translate(-5%,15%) }
+  50% { transform: translate(-10%,5%) }
+  60% { transform: translate(15%,0) }
+  70% { transform: translate(0,10%) }
+  80% { transform: translate(-15%,0) }
+  90% { transform: translate(10%,5%) }
+  100% { transform: translate(5%,0) }
+}
+
+
+
+
+
+@keyframes lights {
+  0% {
+    color: hsl(0, 0%, 100%);
+    text-shadow:
+      0 0 1em hsla(47, 6%, 70%, 0.596),
+      0 0 0.125em hsla(0, 0%, 92%, 0.171),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+  30% { 
+    color: hsl(0, 0%, 100%);
+    text-shadow:
+      0 0 1em hsla(0, 100%, 99%, 0.26),
+      0 0 0.125em hsla(39, 100%, 60%, 0.205),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.247),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.11);
+  }
+  
+  40% { 
+    color: hsl(0, 0%, 100%);
+    text-shadow:
+      0 0 1em hsla(34, 100%, 50%, 0.205),
+      0 0 0.125em hsla(320, 100%, 90%, 0.226),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.068),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.267);
+  }
+  
+  70% {
+    color: hsl(0, 0%, 100%);
+    text-shadow:
+      0 0 1em hsla(34, 100%, 50%, 0.082),
+      0 0 0.125em hsla(0, 100%, 60%, 0.205),
+      0.5em -0.125em 0.25em hsla(0, 100%, 60%, 0.068),
+      -0.5em 0.125em 0.25em hsla(22, 100%, 60%, 0.123);
+  }
+  
+  100% {
+    color: hsl(0, 0%, 100%);
+    text-shadow:
+      0 0 1em hsla(0, 100%, 99%, 0.185),
+      0 0 0.125em hsla(0, 0%, 92%, 0.171),
+      1em -0.125em 0.5em hsla(0, 0%, 100%, 0.075),
+      -1em 0.125em 0.5em hsla(0, 0%, 100%, 0);
+  }
+  
+}
+
+h6 {
+  margin: auto;
+  padding-top: 3%;
+  font-size: 6.5rem;
+  font-weight: 300;
+  animation: lights 11s 750ms linear infinite;
+  text-align: center;
+  font-family: 'Righteous', cursive;
+
+}
